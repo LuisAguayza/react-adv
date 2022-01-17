@@ -22,7 +22,7 @@ for (const input of formJson) {
 
         if (rule.type === 'minLength') {
             schema = schema.min((rule as any).value || 1,
-                `Mínimo de ${(rule as any).value || 2}`);
+                `Mínimo de ${(rule as any).value || 2} caracteres`);
         }
 
         rule.type === 'email' && (schema = schema.email('Debe ingresar un email'));
